@@ -1,4 +1,4 @@
-const { Duration } = require("../src/vo/duration");
+const { Duration } = require("../../src/vo/duration");
 
 describe("Duration test", () => {
   describe("생성", () => {

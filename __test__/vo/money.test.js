@@ -1,4 +1,4 @@
-const { Money } = require("../src/vo/money");
+const { Money } = require("../../src/vo/money");
 
 describe("Money test", () => {
   describe("생성", () => {
