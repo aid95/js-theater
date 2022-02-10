@@ -1,4 +1,4 @@
-const { Money } = require("../../src/vo/money");
+const { Money } = require("../../src/vo");
 const { AmountDiscountPolicy } = require("../../src/policies/amount-distcount");
 const { SequenceCondition } = require("../../src/conditions/sequence");
 const { Screening } = require("../../src/screening");

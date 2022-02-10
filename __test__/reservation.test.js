@@ -1,10 +1,9 @@
 const { Reservation } = require("../src/reservation");
 const { Screening } = require("../src/screening");
-const { Duration } = require("../src/vo/duration");
-const { Money } = require("../src/vo/money");
 const { AmountDiscountPolicy } = require("../src/policies/amount-distcount");
 const { Movie } = require("../src/movie");
 const { Theater } = require("../src/theater");
+const { Duration, Money } = require("../src/vo");
 
 describe("Reservation Test", () => {
   test("생성", () => {

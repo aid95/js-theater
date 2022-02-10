@@ -1,9 +1,8 @@
-const { Duration } = require("../src/vo/duration");
-const { Money } = require("../src/vo/money");
 const { AmountDiscountPolicy } = require("../src/policies/amount-distcount");
 const { Movie } = require("../src/movie");
 const { Screening } = require("../src/screening");
 const { SequenceCondition } = require("../src/conditions/sequence");
+const { Duration, Money } = require("../src/vo");
 
 describe("Movie test", () => {
   test("영화 생성", () => {

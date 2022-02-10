@@ -1,9 +1,8 @@
-const { Money } = require("../src/vo/money");
 const { Theater } = require("../src/theater");
 const { Movie } = require("../src/movie");
-const { Duration } = require("../src/vo/duration");
 const { Screening } = require("../src/screening");
 const { AmountDiscountPolicy } = require("../src/policies/amount-distcount");
+const { Duration, Money } = require("../src/vo");
 
 const makeSut = function () {
   const title = "spiderman";
