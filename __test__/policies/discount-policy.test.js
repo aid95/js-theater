@@ -1,7 +1,7 @@
-const { Money } = require("../../src/vo");
-const { AmountDiscountPolicy } = require("../../src/policies/amount-distcount");
-const { SequenceCondition } = require("../../src/conditions/sequence");
-const { Screening } = require("../../src/screening");
+import { SequenceCondition } from "../../src/conditions/sequence";
+import { AmountDiscountPolicy } from "../../src/policies/amount-distcount";
+import { Screening } from "../../src/screening";
+import { Money } from "../../src/vo";
 
 describe("Discount policies Test", () => {
   it("고정값 할인 정책", () => {

@@ -1,4 +1,4 @@
-function Reservation(theater, movie, screening, count) {
+export function Reservation(theater, movie, screening, count) {
   this.theater = theater;
   this.movie = movie;
   this.screening = screening;
@@ -10,5 +10,3 @@ Object.defineProperty(Reservation, "NONE", {
   value: new Reservation(null, null, null, 0),
   writable: false,
 });
-
-exports.Reservation = Reservation;

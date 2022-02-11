@@ -1,4 +1,4 @@
-exports.DiscountPolicy = class {
+export class DiscountPolicy {
   #conditions;
 
   constructor() {
@@ -21,4 +21,4 @@ exports.DiscountPolicy = class {
   _calculateFee(fee) {
     throw new Error("you have to build your own calculateFee");
   }
-};
+}

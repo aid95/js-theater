@@ -1,4 +1,4 @@
-exports.Duration = class {
+export class Duration {
   #seconds;
 
   constructor(sec) {
@@ -17,4 +17,4 @@ exports.Duration = class {
   static ofMinutes(minutes) {
     return new this(minutes * 60);
   }
-};
+}

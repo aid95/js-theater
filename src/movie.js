@@ -1,4 +1,4 @@
-exports.Movie = class {
+export class Movie {
   #title;
   #runningTime;
   #fee;
@@ -14,4 +14,4 @@ exports.Movie = class {
   calculateFee(screening, count) {
     return this.#policy.calculateFee(screening, count, this.#fee);
   }
-};
+}

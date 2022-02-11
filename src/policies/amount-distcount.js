@@ -1,6 +1,6 @@
-const { DiscountPolicy } = require("./discount-policy");
+import { DiscountPolicy } from "./discount-policy";
 
-exports.AmountDiscountPolicy = class extends DiscountPolicy {
+export class AmountDiscountPolicy extends DiscountPolicy {
   #amount;
 
   constructor(account) {
@@ -11,4 +11,4 @@ exports.AmountDiscountPolicy = class extends DiscountPolicy {
   _calculateFee(fee) {
     return fee.minus(this.#amount);
   }
-};
+}

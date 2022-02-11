@@ -1,4 +1,4 @@
-exports.Money = class Money {
+export class Money {
   #value;
 
   constructor(value) {
@@ -21,4 +21,4 @@ exports.Money = class Money {
   equals(o) {
     return this.#value === o.#value;
   }
-};
+}

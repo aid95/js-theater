@@ -1,4 +1,4 @@
-exports.Theater = class {
+export class Theater {
   #amount;
   #movies;
 
@@ -21,4 +21,4 @@ exports.Theater = class {
     }
     return this.#movies.get(movie).add(screening);
   }
-};
+}

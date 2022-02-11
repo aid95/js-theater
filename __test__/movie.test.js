@@ -1,8 +1,8 @@
-const { AmountDiscountPolicy } = require("../src/policies/amount-distcount");
-const { Movie } = require("../src/movie");
-const { Screening } = require("../src/screening");
-const { SequenceCondition } = require("../src/conditions/sequence");
-const { Duration, Money } = require("../src/vo");
+import { Duration, Money } from "../src/vo";
+import { Screening } from "../src/screening";
+import { AmountDiscountPolicy } from "../src/policies/amount-distcount";
+import { Movie } from "../src/movie";
+import { SequenceCondition } from "../src/conditions/sequence";
 
 describe("Movie test", () => {
   test("영화 생성", () => {

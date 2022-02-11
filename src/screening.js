@@ -1,4 +1,4 @@
-exports.Screening = class Screening {
+export class Screening {
   #seat;
   #sequence;
   #whenScreened;
@@ -31,4 +31,4 @@ exports.Screening = class Screening {
     }
     this.#seat -= count;
   }
-};
+}

@@ -1,5 +1,5 @@
-const { Screening } = require("../../src/screening");
-const { SequenceCondition } = require("../../src/conditions/sequence");
+import { Screening } from "../../src/screening";
+import { SequenceCondition } from "../../src/conditions/sequence";
 
 describe("Condition Test", () => {
   it("SequenceCondition", () => {

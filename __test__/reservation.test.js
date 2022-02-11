@@ -1,9 +1,9 @@
-const { Reservation } = require("../src/reservation");
-const { Screening } = require("../src/screening");
-const { AmountDiscountPolicy } = require("../src/policies/amount-distcount");
-const { Movie } = require("../src/movie");
-const { Theater } = require("../src/theater");
-const { Duration, Money } = require("../src/vo");
+import { Duration, Money } from "../src/vo";
+import { Screening } from "../src/screening";
+import { AmountDiscountPolicy } from "../src/policies/amount-distcount";
+import { Movie } from "../src/movie";
+import { Theater } from "../src/theater";
+import { Reservation } from "../src/reservation";
 
 describe("Reservation Test", () => {
   test("생성", () => {

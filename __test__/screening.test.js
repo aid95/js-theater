@@ -1,4 +1,4 @@
-const { Screening } = require("../src/screening");
+import { Screening } from "../src/screening";
 
 describe("Screening Test", () => {
   it("생성", () => {

@@ -1,8 +1,8 @@
-const { Theater } = require("../src/theater");
-const { Movie } = require("../src/movie");
-const { Screening } = require("../src/screening");
-const { AmountDiscountPolicy } = require("../src/policies/amount-distcount");
-const { Duration, Money } = require("../src/vo");
+import { Duration, Money } from "../src/vo";
+import { AmountDiscountPolicy } from "../src/policies/amount-distcount";
+import { Theater } from "../src/theater";
+import { Screening } from "../src/screening";
+import { Movie } from "../src/movie";
 
 const makeSut = function () {
   const title = "spiderman";

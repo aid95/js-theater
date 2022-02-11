@@ -1,4 +1,4 @@
-const { Duration } = require("../../src/vo");
+import { Duration } from "../../src/vo";
 
 describe("Duration test", () => {
   describe("생성", () => {

@@ -1,6 +1,6 @@
-const { Condition } = require("./condition");
+import { Condition } from "./condition";
 
-exports.SequenceCondition = class extends Condition {
+export class SequenceCondition extends Condition {
   #sequence;
 
   constructor(sequence) {
@@ -11,4 +11,4 @@ exports.SequenceCondition = class extends Condition {
   isSatisfiedBy(screening, audienceCount) {
     return screening.sequence === this.#sequence;
   }
-};
+}
