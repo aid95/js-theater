@@ -1,10 +1,28 @@
-export class Theater {
-  #amount;
-  #movies;
+import { Ticket } from "./ticket";
 
-  constructor(amount) {
-    this.#amount = amount;
+export class Theater {
+  #fee;
+  #movies;
+  #ticketOffices;
+
+  constructor(fee) {
+    this.#fee = fee;
     this.#movies = new Map();
+    this.#ticketOffices = new Set();
+  }
+
+  setTicketOffice(ticketOffice) {
+    this.#ticketOffices.add(ticketOffice);
+  }
+
+  setTicket(ticketOffice, num) {
+    if (!this.#ticketOffices.has(ticketOffice)) {
+      return false;
+    }
+    while (num-- > 0) {
+      ticketOffice.addTicket(new Ticket(this));
+    }
+    return true;
   }
 
   addMovie(movie) {
@@ -20,5 +38,9 @@ export class Theater {
       return false;
     }
     return this.#movies.get(movie).add(screening);
+  }
+
+  getFee() {
+    return this.#fee;
   }
 }

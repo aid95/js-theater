@@ -3,6 +3,7 @@ import { AmountDiscountPolicy } from "../src/policies/amount-distcount";
 import { Theater } from "../src/theater";
 import { Screening } from "../src/screening";
 import { Movie } from "../src/movie";
+import { TicketOffice } from "../src/ticket-office";
 
 const makeSut = function () {
   const title = "spiderman";
@@ -41,5 +42,29 @@ describe("Theater Test", () => {
     expect(theater.addScreening(movie, screening)).toBeFalsy();
     expect(theater.addMovie(movie)).toBeTruthy();
     expect(theater.addScreening(movie, screening)).toBeTruthy();
+  });
+
+  test("계약된 오피스에 티켓을 발급한다.", () => {
+    const ticketOffice = new TicketOffice(Money.of(1000));
+    const { theater } = makeSut();
+
+    theater.setTicketOffice(ticketOffice);
+
+    expect(theater.setTicket(ticketOffice, 5)).toBeTruthy();
+  });
+
+  test("계약하지 않은 오피스에 티켓을 발급하지 못한다.", () => {
+    const ticketOffice = new TicketOffice(Money.of(1000));
+    const { theater } = makeSut();
+
+    expect(theater.setTicket(ticketOffice, 5)).toBeFalsy();
+  });
+
+  test("티켓의 가격을 가져온다.", () => {
+    const fee = 1000;
+
+    const theater = new Theater(Money.of(fee));
+
+    expect(theater.getFee().equals(Money.of(fee))).toBeTruthy();
   });
 });
